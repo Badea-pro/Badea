@@ -1,0 +1,47 @@
+body{
+    font-family: "Aventa", Sans-serif;
+}
+.ww{
+    font-family: "Aventa", Sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-top: -110px;
+    
+}
+#h1{
+    font-size: 19px;
+    text-align: center;
+    font-family: "Aventa", Sans-serif;
+}
+#but1{
+    text-transform: uppercase;
+    border: none;
+    font-family: "Aventa", Sans-serif;
+    border-radius: 40px;
+    background-color: #fdcb23;
+    font-size: 15px;
+    width: 250px;
+    height: 50px;
+}
+#but1:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+#but2{
+    color: white;
+    border: none;
+    font-family: "Aventa", Sans-serif;
+    border-radius: 40px;
+    background-color: #a964fc;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+}
+#but2:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+ }
+.any{
+    background-color: #f8f8f8;
+}

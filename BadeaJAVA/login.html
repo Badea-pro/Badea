@@ -1,0 +1,46 @@
+<html>
+
+    <head>
+        <title>Badea</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+
+<body>
+    
+    <div id="d1"></div>
+    <h1 id="tim"></h1>
+    <hr>
+    <button onclick="createBtn();">Start</button>
+    <button onclick="stopBtn();">Stop</button>
+    <button onclick="clearInterval(myT);">Stop Time</button>
+    <script>
+
+        var myBtn;
+
+        function createBtn() {
+            window.d1.innerHTML += "<button>OK</button>";
+            myBtn = setTimeout(createBtn, 1000 );
+        }
+
+        setTimeout( function () {
+            window.d1.innerHTML += "Hello";
+        } , 2000 )
+
+        function stopBtn(){
+            clearTimeout(myBtn);
+        } 
+
+        var myT = setInterval( function(){
+            window.tim.innerHTML = new Date().toLocaleTimeString();
+        } , 1000 );
+        
+
+        setTimeout(function() {
+            clearInterval(myT); 
+        } , 10000)
+
+    </script>
+</body>
+
+
+</html>

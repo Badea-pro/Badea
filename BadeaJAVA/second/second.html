@@ -1,0 +1,111 @@
+<html>
+    <title>Second simple</title>
+    <style>
+        img{
+            width: 90px;
+            height: 90px;
+            position: relative;
+        }
+    </style>
+<head>
+ 
+    <div style="background-color: greenyellow;">
+<body>
+    <img id="i" src="tot.jpg" />
+
+    <script>
+        var L = 0;
+        var myI = setInterval(function () {
+            window.i.style.left = L++;
+            if(L>400) {
+                clearInterval(myI);
+            }
+        } , 20);
+    </script>
+
+    <img id="i1" src="f.jpg" onmouseover="move1();" onmouseout="clearTimeout(myI1);"/>
+    <script>
+
+        var myI1;
+
+        function move1(){
+            window.i1.style.left = 3;
+            window.i1.style.top = 3;
+            myI1 = setTimeout(move2, 10);
+        }
+
+        function move2(){
+            window.i1.style.top = 0;
+            window.i1.style.left = 0;
+            myI1 = setTimeout(move1, 10);
+        }
+
+    </script>
+
+    <h1 style="background-color: red; color: darkblue;" id="h">Welcome To Badea’s Page</h1>
+
+    <script>
+
+        var val = 0;
+
+        var myH = setInterval(function() {
+            window.h.style.fontSize = val++;
+            if(val > 60) {
+                clearInterval(myH);
+            }
+        } , 35 );
+    
+    </script>
+
+        <input id="txt" style="width:300px;"/>
+
+        <script>
+            
+            var text = "Badea Is Best Coder In The World";
+            var cIndex = 0;
+            var myT = setInterval(function() {
+                window.txt.value += text[cIndex++];
+                if(cIndex >= text.length) {
+                    clearInterval(myT);
+                }
+            }, 120);
+
+        </script>
+
+        <style>
+            #d{
+                background-color: darkred;
+                color: bisque;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                font-size: 60px;
+                border: 3px solid #e66574;
+                border-radius: 45px;
+                width: 90px;
+                height: 90px;
+            }
+        </style>
+
+        <div id="d">15</div>
+        <div id="d2" style="display: none;"><a href="#">Download Now</a></div>
+ 
+        <script>
+
+            var num = 14;
+            var myD = setInterval(function() {
+                window.d.innerHTML = num--;
+                if(num <-1) {
+                    clearInterval(myD);
+                    window.d.style.display = "none";
+                    window.d2.style.display = "block";
+                }
+            }, 1000);
+
+        </script>
+        
+
+</body>
+        </div>
+</head>
+</html>

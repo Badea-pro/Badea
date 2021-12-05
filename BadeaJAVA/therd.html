@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>therd simple</title>
+</head>
+
+<body>
+    <h1 id="h">Start</h1>
+    <h1 style="background-color: coral; color: blue;"> اكتب اسمك الثنائي باللغة العربية </h1>
+    <input id="txt" />
+    <br><br>
+    <button onclick="check();">Check</button>
+    <script>
+
+        //var text = "Hello Badea, 7 Welcome To Page"; 
+        ///////////       /\d+/
+        //var r = text.search(/\d/);
+        //var r = text.search(/badea/i);
+        //window.h.innerHTML = r;
+
+        function check() {
+            var text = window.txt.value;
+            var patt;
+
+            //patt = /^\d+$/;
+            //patt = /^\+002\d{8}$/;
+            //patt = /^[A-Z][a-z]+$/;
+            //patt = /^[ا-ي]+$/;
+            patt = /^[ا-ي]+(\s[ا-ي]+)*$/;
+
+            var b = patt.test(text);
+            if(b) {
+                window.h.innerHTML = "<div style='color:lightgreen;'>التحقق صحيح</div>";
+            }
+            else {
+                window.h.innerHTML = "<div style='color:red;'>التحقق غير صحيح</div>";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

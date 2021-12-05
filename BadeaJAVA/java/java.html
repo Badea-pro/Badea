@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" type="text/css" href="javastyle.css">
+
+    
+</head>
+
+<body>
+
+
+
+
+    <style>
+        button{
+            color: pink;
+            background-color: red;
+        }
+        #mymsg{
+            position: fixed;
+            top: 30px;
+            width: 300px;
+            word-wrap: break-word;
+            box-shadow: 0 0 5px rgba( 159,159,159,0.6);
+            border-radius: 7px;
+            background-color: lightblue;
+            text-align: center;
+            z-index: 100001;
+            opacity: 1;
+            padding: 10px;
+        }
+
+        /*#but{
+            color: blue;
+            background-color: blue;
+        }*/
+        input{
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <div style="background-color: yellow;" id="page" onmousedown="hdieMsg();">
+
+    <button onclick="alert ('Badea is best coder');">Test Alert</button>
+
+    <button onclick="window.h.innerHTML=prompt('Enter Name');">Test Prompet</button>
+    <br><br>
+
+    <h1 style="background-color: tomato; color: blue;">فصلاً اكتب اسمك في المربع<h1>
+
+    <input id="txt" value=" Welcome to Badea’s page "/>
+    <button onclick="showMsg(window.txt.value);">Test Msg</button>
+    <br><br>
+
+    <h1 style="background-color:cyan; color: red;">اضغط على الزر و اكتب ما تشاء<h1>
+
+    <button onclick="showInput('Enter Name:',window.h);">Test input1</button>    
+    <button onclick="showInput('Enter Name:',window.h2);">Test input2</button>
+    <button onclick="showInput('Enter Name:',window.h3);">Test input3</button>    
+    <button onclick="showInput('Enter Name:',window.h4);">Test input4</button>    
+    <button onclick="showInput('Enter Name:',window.h5);">Test input5</button>    
+    
+    
+
+    <h1 id="h" style="color: blue;">Welcome1</h1>
+    <h1 id="h2" style="color:red">Welcome2</h1>
+    <h1 id="h3" style="color: orange;">Welcome3</h1>
+    <h1 id="h4" style="color: pink;">Welcome4</h1>
+    <h1 id="h5" style="color: black;">Welcome5</h1>
+  
+    </div>
+
+    <div id="msg"></div>
+
+    <script>
+
+        var bg;
+        var ell;
+
+        function showMsg(text="My Message"){
+            var L = (document.body.clientWidth - 300) / 2;
+            window.page.style.opacity = 0.2;
+            document.body.style.zIndex = 0;
+            bg = document.body.style.backgroundColor;
+            document.body.style.backgroundColor = "ddd";
+            var strMsg = "";
+            strMsg += "<div id='mymsg'>" + text + "<br><br>"
+                   + "<Button class='button' onclick='hdieMsg();'>ok</Button></div>";
+
+            window.msg.innerHTML = strMsg;
+            window.mymsg.style.left = L;
+        }
+
+        function hdieMsg() {
+            window.msg.innerHTML = "";
+            window.page.style.opacity = 1;
+            document.body.style.backgroundColor = bg;
+        }
+
+        function showInput(title,el) {
+            ell = el;
+            var L = (document.body.clientWidth - 300) / 2;
+            window.page.style.opacity = 0.2;
+            document.body.style.zIndex = 0;
+            bg = document.body.style.backgroundColor;
+            document.body.style.backgroundColor = "ddd";
+            var strMsg = "";
+            strMsg += "<div id='mymsg'>" + title + "<br>"
+                   + "<input id='txtInput' style='width:200px' />"
+                   + "<br><br>"
+                   + "<Button style='background-color:red; border-color:blue; color:white' onclick='hideInput();'>OK</Button></div>";
+
+            window.msg.innerHTML = strMsg;
+            window.mymsg.style.left = L;
+            window.txtInput.focus();
+        }
+
+        function hideInput(){
+            ell.innerHTML = window.txtInput.value;
+            hdieMsg();
+        }
+
+    </script>
+
+</body>
+
+
+</html>
